@@ -78,4 +78,4 @@ m.obs <- m %>%
   filter(process_id %in% c("city_day_absolute", "city_day_mad")) %>%
   select(city=region_id, country, date, poll, unit, value, source) %>%
   arrange(country, city, poll, date)
-write.csv(m.obs, file = file.path(dir_results, "observations.png"))
+write.csv(m.obs, file = file.path(dir_results, "observations.csv"), row.names = F)
